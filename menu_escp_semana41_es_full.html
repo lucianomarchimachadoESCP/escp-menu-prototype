@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menú ESCP — Semana 41 — Póster de Emojis</title>
+<style>
+  @page { size: A4 portrait; margin: 14mm; }
+  :root{
+    --brand:#1F4E79;
+    --table-head:#D9E1F2;
+    --text:#282828;
+    --muted:#555;
+    --border:#BFC7D5;
+  }
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Noto Sans", Arial, sans-serif;
+    color:var(--text);
+    background:#fff;
+  }
+  .page{
+    width:210mm;
+    min-height:297mm;
+    margin:0 auto;
+    padding:14mm;
+    box-sizing:border-box;
+  }
+  .header{
+    background:var(--brand);
+    color:#fff;
+    padding:16mm 14mm;
+    border-radius:8px;
+  }
+  .header .title{
+    margin:0 0 6px 0;
+    font-size:22pt;
+    font-weight:700;
+    letter-spacing:.3px;
+  }
+  .header .subtitle{
+    margin:0;
+    font-size:13pt;
+    opacity:.95;
+  }
+  .week{
+    margin:10mm 0 6mm;
+    font-size:13pt;
+    font-weight:600;
+    color:var(--text);
+  }
+  .day{
+    margin:12mm 0 6mm;
+    font-size:18pt;
+    color:var(--brand);
+    font-weight:800;
+  }
+  table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    margin:2mm 0 8mm;
+    border:1px solid var(--border);
+    border-radius:8px;
+    overflow:hidden;
+    font-size:11pt;
+  }
+  thead th{
+    background:var(--table-head);
+    text-align:left;
+    padding:7px 10px;
+    border-bottom:1px solid var(--border);
+    font-weight:700;
+  }
+  tbody td{
+    padding:7px 10px;
+    vertical-align:top;
+    border-bottom:1px solid #e7ebf3;
+  }
+  tbody tr:last-child td{
+    border-bottom:none;
+  }
+  .dish{
+    font-weight:600;
+  }
+  .diet{
+    font-size:10.5pt;
+    color:var(--muted);
+    white-space:nowrap;
+  }
+  .allergen-row td{
+    color:var(--muted);
+    font-size:10.5pt;
+    padding-top:2px;
+    padding-bottom:10px;
+  }
+  .legend{
+    margin-top:12mm;
+    padding-top:8mm;
+    border-top:1px dashed #cfd6e4;
+    color:var(--muted);
+    font-size:10.5pt;
+    line-height:1.45;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .logo img{
+    height:26px;
+  }
+  .logo span{
+    font-weight:700;
+    font-size:14pt;
+    letter-spacing:.2px;
+  }
+  @media print{
+    .page{ box-shadow:none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/ESCP_Europe_Logo.png" alt="Logo ESCP">
+      <span>ESCP Business School</span>
+    </div>
+    <h1 class="title">Menú de Autoservicio — Nivel 1</h1>
+    <p class="subtitle">Semana 41 — 6–10 de octubre de 2025</p>
+  </div>
+  <p class="week">Menú semanal (alérgenos mostrados como emojis; información dietética escrita)</p>
+
+<h2 class="day">Lunes, 6 de octubre</h2>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Platos principales</td><td class='dish'>Carbonada de cerdo — €3.90</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🌾 🥛 🌼</td></tr>
+<tr><td></td><td class='dish'>Filete de bacalao con salsa de limón — €3.70</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🐟 🥛 🌼</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Parrilla</td><td class='dish'>Hamburguesa picada — €3.25</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Escalope de pavo a la parrilla — €3.55</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Vegetariano</td><td class='dish'>Chili sin carne — €3.44</td><td class='diet'>Vegano, Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Guarniciones</td><td class='dish'>Patatas naturales — €0.59</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Arroz — €0.64</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+</tbody></table>
+
+<h2 class="day">Martes, 7 de octubre</h2>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Platos principales</td><td class='dish'>Ternera salteada con salsa de soja (orgánica) — €3.61</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🌱 💨</td></tr>
+<tr><td></td><td class='dish'>Filete de pescado con salsa de hinojo — €3.91</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🐟 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Parrilla</td><td class='dish'>Hamburguesa picada — €3.25</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Escalope de pavo a la parrilla — €3.55</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Vegetariano</td><td class='dish'>Albóndigas de verduras al curry — €3.56</td><td class='diet'>Vegetariano</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🌾 🥚 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Guarniciones</td><td class='dish'>Verduras orgánicas — €0.59</td><td class='diet'>Sin gluten, Vegano</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Sémola — €0.64</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🌾</td></tr>
+</tbody></table>
+
+<h2 class="day">Miércoles, 8 de octubre</h2>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Platos principales</td><td class='dish'>Costilla de cerdo caramelizada — €3.90</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Filete de salmón con crema de curry — €3.79</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🐟 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Parrilla</td><td class='dish'>Hamburguesa picada — €3.25</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Escalope de pavo a la parrilla — €3.55</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Vegetariano</td><td class='dish'>Quiche Lorraine — €3.44</td><td class='diet'>Vegetariano</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🌾 🥚 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Guarniciones</td><td class='dish'>Brócoli — €0.57</td><td class='diet'>Sin gluten, Vegano</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Patatas salteadas con perejil — €0.57</td><td class='diet'>Sin gluten, Vegano</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+</tbody></table>
+
+<h2 class="day">Jueves, 9 de octubre</h2>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Platos principales</td><td class='dish'>Pastel de pastor (orgánico) — €3.91</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🥛</td></tr>
+<tr><td></td><td class='dish'>Filete de pescado a las almendras — €3.91</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🐟 🌰 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Parrilla</td><td class='dish'>Hamburguesa picada — €3.25</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Escalope de pavo a la parrilla — €3.55</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Vegetariano</td><td class='dish'>Albóndigas a la provenzal — €3.49</td><td class='diet'>Vegetariano</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🌾 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Guarniciones</td><td class='dish'>Judías verdes orgánicas — €0.59</td><td class='diet'>Sin gluten, Vegano</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Pasta con tomate y albahaca — €0.57</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🌾</td></tr>
+</tbody></table>
+
+<h2 class="day">Viernes, 10 de octubre</h2>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Platos principales</td><td class='dish'>Croquetas de pollo — €3.90</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🌾 🥚 🥛</td></tr>
+<tr><td></td><td class='dish'>Filete de merluza con salsa de camarones — €3.94</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🐟 🦐 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Parrilla</td><td class='dish'>Hamburguesa picada — €3.25</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+<tr><td></td><td class='dish'>Escalope de pavo a la parrilla — €3.55</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Vegetariano</td><td class='dish'>Croquetas de verduras a la parrilla — €3.44</td><td class='diet'>Vegetariano</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🌾 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style='width:38%'>Categoría</th><th style='width:42%'>Plato</th><th style='width:20%'>Dieta</th></tr></thead><tbody>
+<tr><td>Guarniciones</td><td class='dish'>Lentejas verdes con zanahoria y huevo — €0.62</td><td class='diet'></td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: 🥚</td></tr>
+<tr><td></td><td class='dish'>Patatas — €0.64</td><td class='diet'>Sin gluten</td></tr>
+<tr class='allergen-row'><td></td><td colspan='2'>Alérgenos: —</td></tr>
+</tbody></table>
+
+  <div class="legend">
+    <div><strong>Dieta:</strong> Vegetariano, Vegano, Sin gluten (escrito como texto)</div>
+    <div><strong>Alérgenos:</strong> 🌾 = gluten (cereales), 🦐 = crustáceos, 🥚 = huevos, 🐟 = pescado, 🥜 = cacahuetes, 🌱 = soja, 🥛 = leche, 🌰 = frutos secos, 🥬 = apio, 🌼 = mostaza, ⚪ = sésamo, 💨 = sulfitos, 🌻 = altramuces, 🐚 = moluscos</div>
+  </div>
+</div>
+</body>
+</html>
