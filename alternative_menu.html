@@ -5,94 +5,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESCP Menu — Week 41 — Emoji Poster</title>
 <style>
-:root {
---brand: #1F4E79;
---table-head: #D9E1F2;
---text: #282828;
---muted: #555;
---border: #BFC7D5;
-}
-
-
-body {
-margin: 0;
-font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Noto Sans", Arial, sans-serif;
-color: var(--text);
-background: #fff;
-}
-
-
-.language-bar {
-display: flex;
-justify-content: flex-end;
-align-items: center;
-gap: 10px;
-padding: 8px 5vw;
-background: #f5f7fa;
-border-bottom: 1px solid #dfe3eb;
-flex-wrap: wrap;
-}
-
-
-.language-bar img {
-width: 24px;
-height: 18px;
-border-radius: 3px;
-box-shadow: 0 0 2px rgba(0,0,0,0.2);
-transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-
-.language-bar a:hover img {
-transform: scale(1.1);
-box-shadow: 0 0 4px rgba(0,0,0,0.3);
-}
-
-
-.page {
-max-width: 900px;
-width: 90%;
-margin: 0 auto;
-padding: 5vw;
-box-sizing: border-box;
-}
-
-
-.header {
-background: var(--brand);
-color: #fff;
-padding: 5vw;
-border-radius: 8px;
-}
-
-
-.header .title {
-margin: 0 0 6px 0;
-font-size: clamp(1.4rem, 2.5vw, 2rem);
-font-weight: 700;
-letter-spacing: 0.3px;
-}
-
-
-.header .subtitle {
-margin: 0;
-font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-opacity: 0.95;
-}
-
-
-.week {
-margin: 2rem 0 1rem;
-font-size: clamp(1rem, 1.8vw, 1.2rem);
-font-weight: 600;
-color: var(--text);
-}
-
-
-.day {
-margin: 2rem 0 1rem;
-font-size: clamp(1.3rem, 2vw, 1.6rem);
-color: var(--brand);
+  @page { size: A4 portrait; margin: 14mm; }
+  :root{
+    --brand:#1F4E79;
+    --table-head:#D9E1F2;
+    --text:#282828;
+    --muted:#555;
+    --border:#BFC7D5;
+  }
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Noto Sans", Arial, sans-serif;
+    color:var(--text);
+    background:#fff;
+  }
+  .language-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14mm;
+    background: #f5f7fa;
+    border-bottom: 1px solid #dfe3eb;
+  }
+  .language-bar img {
+    width: 28px;
+    height: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .language-bar a:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  }
+  .page{
+    width:210mm;
+    min-height:297mm;
+    margin:0 auto;
+    padding:14mm;
+    box-sizing:border-box;
+  }
+  .header{
+    background:var(--brand);
+    color:#fff;
+    padding:16mm 14mm;
+    border-radius:8px;
+  }
+  .header .title{
+    margin:0 0 6px 0;
+    font-size:22pt;
+    font-weight:700;
+    letter-spacing:.3px;
+  }
+  .header .subtitle{
+    margin:0;
+    font-size:13pt;
+    opacity:.95;
+  }
+  .week{
+    margin:10mm 0 6mm;
+    font-size:13pt;
+    font-weight:600;
+    color:var(--text);
+  }
+  .day{
+    margin:12mm 0 6mm;
+    font-size:18pt;
+    color:var(--brand);
+    font-weight:800;
+  }
+  table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    margin:2mm 0 8mm;
+    border:1px solid var(--border);
+    border-radius:8px;
+    overflow:hidden;
+    font-size:11pt;
+  }
+  thead th{
+    background:var(--table-head);
+    text-align:left;
+    padding:7px 10px;
+    border-bottom:1px solid var(--border);
+    font-weight:700;
+  }
+  tbody td{
+    padding:7px 10px;
+    vertical-align:top;
+    border-bottom:1px solid #e7ebf3;
+  }
+  tbody tr:last-child td{
+    border-bottom:none;
+  }
+  .dish{
+    font-weight:600;
+  }
+  .diet{
+    font-size:10.5pt;
+    color:var(--muted);
+    white-space:nowrap;
+  }
+  .allergen-row td{
+    color:var(--muted);
+    font-size:10.5pt;
+    padding-top:2px;
+    padding-bottom:10px;
+  }
+  .legend{
+    margin-top:12mm;
+    padding-top:8mm;
+    border-top:1px dashed #cfd6e4;
+    color:var(--muted);
+    font-size:10.5pt;
+    line-height:1.45;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .logo img{
+    height:26px;
+  }
+  .logo span{
+    font-weight:700;
+    font-size:14pt;
+    letter-spacing:.2px;
+  }
+  @media print{
+    .page{ box-shadow:none; }
+  }
 </style>
 </head>
 <body>
@@ -268,4 +313,3 @@ color: var(--brand);
 </div>
 </body>
 </html>
-
