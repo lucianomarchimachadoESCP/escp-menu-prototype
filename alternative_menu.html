@@ -1,4 +1,10 @@
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<title>ESCP Menu — Week 41 — Emoji Poster</title>
 <style>
+  /* Remove print page rules on mobile */
+  @page { size: auto; margin: 0; }
 
   :root{
     --brand:#230083;
@@ -10,113 +16,121 @@
 
   body{
     margin:0;
-    background:#fff;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Noto Sans", Arial, sans-serif;
     color:var(--text);
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background:#fff;
   }
 
-  /* PAGE CONTAINER */
+  /* ------------------------------------------
+     GENERAL MOBILE LAYOUT IMPROVEMENTS
+     ------------------------------------------ */
   .page{
     width:100%;
     max-width:700px;
     margin:0 auto;
-    padding:18px;
+    padding:16px;
     box-sizing:border-box;
   }
 
-  /* LANGUAGE BAR */
   .language-bar {
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    padding:10px;
-    background:#f5f7fa;
-    border-bottom:1px solid #dfe3eb;
-    flex-wrap:wrap;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background: #f5f7fa;
+    border-bottom: 1px solid #dfe3eb;
+    flex-wrap: wrap; /* wrap on small screens */
   }
 
   .language-bar img {
-    width:26px;
-    height:18px;
-    border-radius:3px;
-    box-shadow:0 0 2px rgba(0,0,0,0.2);
+    width: 26px;
+    height: 18px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
   }
 
-  /* HEADER */
+  /* ------------------------------------------
+     HEADER — MOBILE RESPONSIVE
+     ------------------------------------------ */
   .header{
     background:var(--brand);
     color:#fff;
-    padding:18px;
-    border-radius:10px;
+    padding:20px;
+    border-radius:8px;
 
     display:flex;
     align-items:center;
-    gap:18px;
+    gap:16px;
   }
 
-  .header-image{
-    width:80px;
+  .header-image {
+    width:70px;
     height:auto;
     border-radius:6px;
   }
 
-  .header-text{
+  .header-text {
     display:flex;
     flex-direction:column;
   }
 
   .header .title{
-    margin:0;
-    font-size:22pt;
+    margin:0 0 4px 0;
+    font-size:20pt;
+    line-height:1.2;
     font-weight:700;
   }
 
   .header .subtitle{
-    margin:4px 0 0;
-    font-size:12pt;
+    margin:0;
+    font-size:11pt;
+    opacity:.95;
   }
 
-  /* WEEK & DAYS */
+  /* ------------------------------------------
+     TYPOGRAPHY (mobile sized)
+     ------------------------------------------ */
   .week{
-    font-size:15pt;
-    margin:24px 0 10px;
+    margin:20px 0 10px;
+    font-size:14pt;
     font-weight:600;
   }
 
   .day{
-    font-size:20pt;
+    margin:24px 0 10px;
+    font-size:18pt;
     font-weight:800;
-    margin:28px 0 8px;
     color:var(--brand);
   }
 
-  /* TABLES */
+  /* ------------------------------------------
+     TABLES — SCROLLABLE ON MOBILE
+     ------------------------------------------ */
   table{
     width:100%;
+    font-size:12pt;
+    margin:10px 0 18px;
     border:1px solid var(--border);
-    border-radius:10px;
+    border-radius:8px;
     border-collapse:separate;
     overflow:hidden;
-    margin:12px 0 22px;
-    font-size:13pt;
-
-    display:block;     
-    overflow-x:auto;   /* enables scrolling when needed */
+    display:block;       /* allows scrolling */
+    overflow-x:auto;
   }
 
   thead th{
     background:var(--table-head);
-    padding:10px 12px;
-    font-weight:700;
     text-align:left;
-    min-width:130px;
+    padding:10px;
+    font-weight:700;
+    min-width:120px;  /* ensures columns stay readable */
   }
 
   tbody td{
-    padding:10px 12px;
-    border-bottom:1px solid #e7eaf2;
+    padding:8px 10px;
+    border-bottom:1px solid #e7ebf3;
     vertical-align:top;
-    min-width:130px;
+    min-width:120px;
   }
 
   tbody tr:last-child td{
@@ -125,27 +139,30 @@
 
   .dish{
     font-weight:600;
-    font-size:13pt;
   }
 
   .diet{
-    font-size:11.5pt;
+    font-size:11pt;
     color:var(--muted);
     white-space:nowrap;
   }
 
   .allergen-row td{
-    color:#777;
-    font-size:11.5pt;
+    color:var(--muted);
+    font-size:11pt;
+    padding-top:2px;
+    padding-bottom:10px;
   }
 
-  /* LEGEND */
+  /* ------------------------------------------
+     LEGEND
+     ------------------------------------------ */
   .legend{
-    margin-top:30px;
+    margin-top:20px;
     padding-top:16px;
     border-top:1px dashed #cfd6e4;
     color:var(--muted);
-    font-size:11.5pt;
+    font-size:11pt;
     line-height:1.5;
   }
 
@@ -160,89 +177,218 @@
   }
 
   .logo span{
-    font-size:15pt;
     font-weight:700;
+    font-size:14pt;
   }
 
-  /* ----------------------------------------------
-     ⚠️ MOBILE OPTIMIZED STYLES (iPhone 14 & below)
-     ---------------------------------------------- */
-  @media (max-width: 430px){
+  /* ------------------------------------------
+     MOBILE-SPECIFIC OVERRIDES
+     ------------------------------------------ */
+  @media (max-width: 600px){
 
-    .page{
-      padding:12px;
-    }
-
-    /* header more compact */
     .header{
       flex-direction:column;
       text-align:center;
-      padding:14px;
-      gap:12px;
     }
 
     .header-image{
-      width:70px;
+      width:90px;
     }
 
-    .header .title{
-      font-size:17pt;
-    }
-
-    .header .subtitle{
-      font-size:10pt;
-    }
-
-    .week{
-      font-size:13pt;
-      margin:18px 0 6px;
+    table{
+      font-size:11pt;
     }
 
     .day{
       font-size:16pt;
-      margin:22px 0 6px;
+      margin-top:30px;
     }
 
-    /* TABLE COMPACT MODE */
-    table{
-      font-size:10pt;
-      margin:10px 0 16px;
-      border-radius:8px;
-    }
-
-    thead th{
-      padding:6px 8px;
-      min-width:90px;   /* critical for iPhone fit */
-      font-size:10pt;
-    }
-
-    tbody td{
-      padding:6px 8px;
-      min-width:90px;
-      font-size:10pt;
-    }
-
-    .dish{
-      font-size:10pt;
-    }
-
-    .diet{
-      font-size:9pt;
-    }
-
-    .allergen-row td{
-      font-size:9pt;
-    }
-
-    .legend{
-      font-size:9.5pt;
-      margin-top:20px;
-    }
-
-    .language-bar img{
-      width:22px;
-      height:15px;
+    .header .title{
+      font-size:18pt;
     }
   }
 
 </style>
+</head>
+<body cz-shortcut-listen="true">
+<!-- Language Selector -->
+<div class="language-bar">
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/" title="English">
+    <img src="https://flagcdn.com/gb.svg" alt="English">
+  </a>
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/menu_escp_semana41_es_full" title="Español">
+    <img src="https://flagcdn.com/es.svg" alt="Español">
+  </a>
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/french-menu" title="Français">
+    <img src="https://flagcdn.com/fr.svg" alt="Français">
+  </a>
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/portuguese-menu" title="Português">
+    <img src="https://flagcdn.com/br.svg" alt="Português (Brasil)">
+  </a>
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/chinese-menu" title="中文">
+    <img src="https://flagcdn.com/cn.svg" alt="中文">
+  </a>
+</div>
+  
+<div class="page">
+  <div class="header">
+  <img class="header-image" src="Green Simple Clean Vegan Food Logo - 1.png" alt="ESCP Menu Image">
+
+  <div class="header-text">
+    <div class="logo">
+      <span>ESCP Business School</span>
+    </div>
+    <h1 class="title">Color-Coded Menu</h1>
+    <p class="subtitle">Week 41 — October 6–10, 2025</p>
+  </div>
+</div>
+  <p class="week">Weekly Menu </p> 
+  <a href="https://forms.gle/aw8uZfYd4oMCALDC7">Please provide feedback here</a><div class="legend">
+    <div><strong>Dietary:</strong>Vegan = 🟢, Vegetarian = 🔵, Gluten‑free = 🔴</div>
+    <div><strong>Allergens:</strong> 🌾 = gluten (cereals), 🦐 = crustaceans, 🥚 = eggs, 🐟 = fish, 🥜 = peanuts, 🌱 = soy, 🥛 = milk, 🌰 = tree nuts, 🥬 = celery, 🌼 = mustard, ⚪ = sesame, 💨 = sulphites, 🌻 = lupin, 🐚 = molluscs</div>
+  </div>
+  
+<h2 class="day">Monday, October 6</h2>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Main Dishes</td><td class="dish">Pork Carbonade — €3.90</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🌾 🥛 🌼</td></tr>
+<tr><td></td><td class="dish">Cod Fillet with Lemon Sauce — €3.70</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🐟 🥛 🌼</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Grill</td><td class="dish">Minced Steak — €3.25</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Grilled Turkey Escalope — €3.55</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Vegetarian</td><td class="dish">Chili Sin Carne — €3.44</td><td class="diet">🟢🔴 Vegan, Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Sides</td><td class="dish">Natural Potatoes — €0.59</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Rice — €0.64</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+</tbody></table>
+<h2 class="day">Tuesday, October 7</h2>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Main Dishes</td><td class="dish">Sautéed Beef with Soy Sauce (Organic) — €3.61</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🌱 💨</td></tr>
+<tr><td></td><td class="dish">Fish Fillet with Fennel Sauce — €3.91</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🐟 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Grill</td><td class="dish">Minced Steak — €3.25</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Grilled Turkey Escalope — €3.55</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Vegetarian</td><td class="dish">Vegetable and Curry Meatballs — €3.56</td><td class="diet">🔵 Vegetarian</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🌾 🥚 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Sides</td><td class="dish">Organic Vegetables — €0.59</td><td class="diet">🟢🔴 Vegan, Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Semolina — €0.64</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🌾</td></tr>
+</tbody></table>
+<h2 class="day">Wednesday, October 8</h2>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Main Dishes</td><td class="dish">Caramelized Pork Rib — €3.90</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Salmon Fillet with Curry Cream — €3.79</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🐟 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Grill</td><td class="dish">Minced Steak — €3.25</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Grilled Turkey Escalope — €3.55</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Vegetarian</td><td class="dish">Quiche Lorraine — €3.44</td><td class="diet">🔵 Vegetarian</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🌾 🥚 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Sides</td><td class="dish">Broccoli — €0.57</td><td class="diet">🟢🔴 Vegan, Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Parsley Sautéed Potatoes — €0.57</td><td class="diet">🟢🔴 Vegan, Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+</tbody></table>
+<h2 class="day">Thursday, October 9</h2>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Main Dishes</td><td class="dish">Shepherd’s Pie (Organic) — €3.91</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🥛</td></tr>
+<tr><td></td><td class="dish">Fish Fillet with Almonds — €3.91</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🐟 🌰 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Grill</td><td class="dish">Minced Steak — €3.25</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Grilled Turkey Escalope — €3.55</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Vegetarian</td><td class="dish">Provencal-Style Meatballs — €3.49</td><td class="diet">🔵 Vegetarian</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🌾 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Sides</td><td class="dish">Organic Green Beans — €0.59</td><td class="diet">🟢🔴 Vegan, Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Pasta with Tomato and Basil — €0.57</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🌾</td></tr>
+</tbody></table>
+<h2 class="day">Friday, October 10</h2>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Main Dishes</td><td class="dish">Chicken Croquettes — €3.90</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🌾 🥚 🥛</td></tr>
+<tr><td></td><td class="dish">Hake Fillet with Shrimp Sauce — €3.94</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🐟 🦐 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Grill</td><td class="dish">Minced Steak — €3.25</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+<tr><td></td><td class="dish">Grilled Turkey Escalope — €3.55</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Vegetarian</td><td class="dish">Grilled Vegetable Croquettes — €3.44</td><td class="diet">🔵 Vegetarian</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🌾 🥛</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th style="width:38%">Category</th><th style="width:42%">Dish</th><th style="width:20%">Diet</th></tr></thead><tbody>
+<tr><td>Sides</td><td class="dish">Green Lentils with Carrots and Egg — €0.62</td><td class="diet"></td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: 🥚</td></tr>
+<tr><td></td><td class="dish">Potatoes — €0.64</td><td class="diet">🔴 Gluten-free</td></tr>
+<tr class="allergen-row"><td></td><td colspan="2">Allergens: —</td></tr>
+</tbody></table>
+  
+</div>
+
+
+
+
+
+</body></html>
