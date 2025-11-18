@@ -3,7 +3,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <title>ESCP Menu — Week 41 — Emoji Poster</title>
 <style>
-  @page { size: A4 portrait; margin: 14mm; }
+  /* Remove print page rules on mobile */
+  @page { size: auto; margin: 0; }
+
   :root{
     --brand:#230083;
     --table-head:#D9E1F2;
@@ -11,136 +13,157 @@
     --muted:#555;
     --border:#230083;
   }
+
   body{
     margin:0;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Noto Sans", Arial, sans-serif;
     color:var(--text);
     background:#fff;
   }
-  .language-bar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 14mm;
-    background: #f5f7fa;
-    border-bottom: 1px solid #dfe3eb;
-  }
-  .language-bar img {
-    width: 28px;
-    height: 20px;
-    border-radius: 3px;
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .language-bar a:hover img {
-    transform: scale(1.1);
-    box-shadow: 0 0 4px rgba(0,0,0,0.3);
-  }
+
+  /* ------------------------------------------
+     GENERAL MOBILE LAYOUT IMPROVEMENTS
+     ------------------------------------------ */
   .page{
-    width:210mm;
-    min-height:297mm;
+    width:100%;
+    max-width:700px;
     margin:0 auto;
-    padding:14mm;
+    padding:16px;
     box-sizing:border-box;
   }
 
-  /* UPDATED HEADER SECTION */
+  .language-bar {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background: #f5f7fa;
+    border-bottom: 1px solid #dfe3eb;
+    flex-wrap: wrap; /* wrap on small screens */
+  }
+
+  .language-bar img {
+    width: 26px;
+    height: 18px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  }
+
+  /* ------------------------------------------
+     HEADER — MOBILE RESPONSIVE
+     ------------------------------------------ */
   .header{
     background:var(--brand);
     color:#fff;
-    padding:16mm 14mm;
+    padding:20px;
     border-radius:8px;
 
-    /* NEW: Layout to place image on left and text on right */
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:16px;
   }
 
-  /* NEW: Image on the left */
   .header-image {
-    width:90px;
+    width:70px;
     height:auto;
-    border-radius:6px; /* optional */
+    border-radius:6px;
   }
 
-  /* NEW: Groups all text on the right */
   .header-text {
     display:flex;
     flex-direction:column;
   }
 
   .header .title{
-    margin:0 0 6px 0;
-    font-size:22pt;
+    margin:0 0 4px 0;
+    font-size:20pt;
+    line-height:1.2;
     font-weight:700;
-    letter-spacing:.3px;
   }
+
   .header .subtitle{
     margin:0;
-    font-size:13pt;
+    font-size:11pt;
     opacity:.95;
   }
 
+  /* ------------------------------------------
+     TYPOGRAPHY (mobile sized)
+     ------------------------------------------ */
   .week{
-    margin:10mm 0 6mm;
-    font-size:13pt;
+    margin:20px 0 10px;
+    font-size:14pt;
     font-weight:600;
-    color:var(--text);
   }
+
   .day{
-    margin:12mm 0 6mm;
+    margin:24px 0 10px;
     font-size:18pt;
-    color:var(--brand);
     font-weight:800;
+    color:var(--brand);
   }
+
+  /* ------------------------------------------
+     TABLES — SCROLLABLE ON MOBILE
+     ------------------------------------------ */
   table{
     width:100%;
-    border-collapse:separate;
-    border-spacing:0;
-    margin:2mm 0 8mm;
+    font-size:12pt;
+    margin:10px 0 18px;
     border:1px solid var(--border);
     border-radius:8px;
+    border-collapse:separate;
     overflow:hidden;
-    font-size:11pt;
+    display:block;       /* allows scrolling */
+    overflow-x:auto;
   }
+
   thead th{
     background:var(--table-head);
     text-align:left;
-    padding:7px 10px;
-    border-bottom:1px solid var(--border);
+    padding:10px;
     font-weight:700;
+    min-width:120px;  /* ensures columns stay readable */
   }
+
   tbody td{
-    padding:7px 10px;
-    vertical-align:top;
+    padding:8px 10px;
     border-bottom:1px solid #e7ebf3;
+    vertical-align:top;
+    min-width:120px;
   }
+
   tbody tr:last-child td{
     border-bottom:none;
   }
+
   .dish{
     font-weight:600;
   }
+
   .diet{
-    font-size:10.5pt;
+    font-size:11pt;
     color:var(--muted);
     white-space:nowrap;
   }
+
   .allergen-row td{
     color:var(--muted);
-    font-size:10.5pt;
+    font-size:11pt;
     padding-top:2px;
     padding-bottom:10px;
   }
+
+  /* ------------------------------------------
+     LEGEND
+     ------------------------------------------ */
   .legend{
-    margin-top:12mm;
-    padding-top:8mm;
+    margin-top:20px;
+    padding-top:16px;
     border-top:1px dashed #cfd6e4;
     color:var(--muted);
-    font-size:10.5pt;
-    line-height:1.45;
+    font-size:11pt;
+    line-height:1.5;
   }
 
   .logo{
@@ -150,17 +173,42 @@
   }
 
   .logo img{
-    height:26px;
+    height:22px;
   }
+
   .logo span{
     font-weight:700;
     font-size:14pt;
-    letter-spacing:.2px;
   }
 
-  @media print{
-    .page{ box-shadow:none; }
+  /* ------------------------------------------
+     MOBILE-SPECIFIC OVERRIDES
+     ------------------------------------------ */
+  @media (max-width: 600px){
+
+    .header{
+      flex-direction:column;
+      text-align:center;
+    }
+
+    .header-image{
+      width:90px;
+    }
+
+    table{
+      font-size:11pt;
+    }
+
+    .day{
+      font-size:16pt;
+      margin-top:30px;
+    }
+
+    .header .title{
+      font-size:18pt;
+    }
   }
+
 </style>
 </head>
 <body cz-shortcut-listen="true">
@@ -338,6 +386,7 @@
 </tbody></table>
   
 </div>
+
 
 
 
