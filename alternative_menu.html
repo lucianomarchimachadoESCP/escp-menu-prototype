@@ -5,11 +5,11 @@
 <style>
   @page { size: A4 portrait; margin: 14mm; }
   :root{
-    --brand:#1F4E79;
+    --brand:#230083;
     --table-head:#D9E1F2;
-    --text:#282828;
+    --text:#230083;
     --muted:#555;
-    --border:#BFC7D5;
+    --border:#230083;
   }
   body{
     margin:0;
@@ -44,12 +44,33 @@
     padding:14mm;
     box-sizing:border-box;
   }
+
+  /* UPDATED HEADER SECTION */
   .header{
     background:var(--brand);
     color:#fff;
     padding:16mm 14mm;
     border-radius:8px;
+
+    /* NEW: Layout to place image on left and text on right */
+    display:flex;
+    align-items:center;
+    gap:20px;
   }
+
+  /* NEW: Image on the left */
+  .header-image {
+    width:90px;
+    height:auto;
+    border-radius:6px; /* optional */
+  }
+
+  /* NEW: Groups all text on the right */
+  .header-text {
+    display:flex;
+    flex-direction:column;
+  }
+
   .header .title{
     margin:0 0 6px 0;
     font-size:22pt;
@@ -61,6 +82,7 @@
     font-size:13pt;
     opacity:.95;
   }
+
   .week{
     margin:10mm 0 6mm;
     font-size:13pt;
@@ -120,11 +142,13 @@
     font-size:10.5pt;
     line-height:1.45;
   }
+
   .logo{
     display:flex;
     align-items:center;
     gap:12px;
   }
+
   .logo img{
     height:26px;
   }
@@ -133,6 +157,7 @@
     font-size:14pt;
     letter-spacing:.2px;
   }
+
   @media print{
     .page{ box-shadow:none; }
   }
@@ -160,13 +185,16 @@
   
 <div class="page">
   <div class="header">
+  <img class="header-image" src="Green Simple Clean Vegan Food Logo - 1.png" alt="ESCP Menu Image">
+
+  <div class="header-text">
     <div class="logo">
-      
       <span>ESCP Business School</span>
     </div>
     <h1 class="title">Color-Coded Menu</h1>
     <p class="subtitle">Week 41 — October 6–10, 2025</p>
   </div>
+</div>
   <p class="week">Weekly Menu </p> 
   <a href="https://forms.gle/aw8uZfYd4oMCALDC7">Please provide feedback here</a><div class="legend">
     <div><strong>Dietary:</strong>Vegan = 🟢, Vegetarian = 🔵, Gluten‑free = 🔴</div>
@@ -310,6 +338,7 @@
 </tbody></table>
   
 </div>
+
 
 
 
