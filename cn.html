@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<title>ESCP Menu — Week 48 — Emoji Poster</title>
+<style>
+  :root{
+    --brand:#230083;
+    --table-head:#D9E1F2;
+    --text:#230083;
+    --muted:#555;
+    --border:#230083;
+  }
+  body{ margin:0; background:#fff; color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+  .page{ width:100%; max-width:700px; margin:0 auto; padding:18px; box-sizing:border-box; }
+  .language-bar { display:flex; justify-content:center; gap:10px; padding:10px; background:#f5f7fa; border-bottom:1px solid #dfe3eb; flex-wrap:wrap; }
+  .language-bar img { width:26px; height:18px; border-radius:3px; box-shadow:0 0 2px rgba(0,0,0,0.2); }
+  .header{ background:var(--brand); color:#fff; padding:18px; border-radius:10px; display:flex; align-items:center; gap:18px; }
+  .header-image{ width:80px; height:auto; border-radius:6px; }
+  .header-text{ display:flex; flex-direction:column; }
+  .header .title{ margin:0; font-size:22pt; font-weight:700; }
+  .header .subtitle{ margin:4px 0 0; font-size:12pt; }
+  .week{ font-size:15pt; margin:24px 0 10px; font-weight:600; }
+  .day{ font-size:20pt; font-weight:800; margin:28px 0 8px; color:var(--brand); }
+  table{ width:100%; border:1px solid var(--border); border-radius:10px; border-collapse:separate; overflow:hidden; margin:12px 0 22px; font-size:12pt; display:block; overflow-x:auto; }
+  thead th{ background:var(--table-head); padding:10px 12px; font-weight:700; text-align:left; min-width:130px; font-size:12pt; }
+  tbody td{ padding:10px 12px; border-bottom:1px solid #e7eaf2; vertical-align:top; min-width:130px; font-size:12pt; }
+  tbody tr:last-child td{ border-bottom:none; }
+  .dish{ font-weight:600; font-size:12pt; }
+  .diet{ font-size:10pt; color:var(--muted); white-space:nowrap; }
+  .allergen-row td{ color:#777; font-size:10pt; }
+  .legend{ margin-top:30px; padding-top:16px; border-top:1px dashed #cfd6e4; color:var(--muted); font-size:11pt; line-height:1.5; }
+  .logo{ display:flex; align-items:center; gap:12px; }
+  .logo img{ height:22px; }
+  .logo span{ font-size:15pt; font-weight:700; }
+  @media (max-width: 430px){
+    .page{ padding:12px; }
+    .header{ flex-direction:column; text-align:center; padding:14px; gap:12px; }
+    .header-image{ width:70px; }
+    .header .title{ font-size:16pt; }
+    .header .subtitle{ font-size:9pt; }
+    .week{ font-size:12pt; margin:18px 0 6px; }
+    .day{ font-size:15pt; margin:22px 0 6px; }
+    table{ font-size:9pt; margin:10px 0 16px; border-radius:8px; }
+    thead th{ padding:5px 6px; min-width:80px; font-size:9pt; }
+    tbody td{ padding:5px 6px; min-width:80px; font-size:9pt; }
+    .dish{ font-size:9pt; }
+    .diet, .allergen-row td{ font-size:8.5pt; }
+    .legend{ font-size:10pt; margin-top:20px; }
+    .language-bar img{ width:22px; height:15px; }
+  }
+</style>
+</head>
+<body>
+<div class="language-bar">
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/" title="English">
+    <img src="https://flagcdn.com/gb.svg" alt="English">
+  </a>
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/menu_escp_semana41_es_full" title="Español">
+    <img src="https://flagcdn.com/es.svg" alt="Español">
+  </a>
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/french-menu" title="Français">
+    <img src="https://flagcdn.com/fr.svg" alt="Français">
+  </a>
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/portuguese-menu" title="Português">
+    <img src="https://flagcdn.com/br.svg" alt="Português (Brasil)">
+  </a>
+  <a href="https://lucianomarchimachadoescp.github.io/escp-menu-prototype/chinese-menu" title="中文">
+    <img src="https://flagcdn.com/cn.svg" alt="中文">
+  </a>
+</div>
+
+<div class="page">
+  <div class="header">
+    <img class="header-image" src="Green Simple Clean 纯素 Food Logo - 1.png" alt="ESCP Menu Image">
+    <div class="header-text">
+      <div class="logo"><span>ESCP Business School</span></div>
+      <h1 class="title">Color-Coded Menu</h1>
+      <p class="subtitle">第48周 — 2025年11月24–28日</p>
+    </div>
+  </div>
+
+  <br>
+  <a href="https://forms.gle/aw8uZfYd4oMCALDC7">请在此留下您的反馈</a>
+
+  <div class="legend">
+    <div><strong>饮食偏好：</strong> 纯素 = 🟢，素食 = 🔵，无麸质 = 🔴</div>
+    <div><strong>过敏原：</strong> 🌾 = 麸质（谷物），🦐 = 甲壳类，🥚 = 鸡蛋，🐟 = 鱼，🥜 = 花生，🌱 = 大豆，🥛 = 牛奶，🌰 = 坚果，🥬 = 芹菜，🌼 = 芥末，⚪ = 芝麻，💨 = 亚硫酸盐，🌻 = 羽扇豆，🐚 = 软体动物</div>
+  </div>
+
+  <!-- Monday -->
+  <h2 class="day">星期一，11月24日</h2>
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>主菜</td><td class="dish">酸甜腌制火鸡串 — €2.93</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 💨 （亚硫酸盐，腌料）</td></tr>
+
+    <tr><td></td><td class="dish">炸鱼薯条 — €2.91</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🌾 🥚 🐟 🥛</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>烧烤</td><td class="dish">牛肉汉堡排 — €3.21</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">烤火鸡嫩排 — €2.35</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>素食</td><td class="dish">蔬菜千层面 — €2.34</td><td class="diet">🔵 素食</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🌾 🥚 🥛</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>配菜</td><td class="dish">布列塔尼风味蔬菜炒 — €0.93</td><td class="diet">🟢 纯素</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">皮拉夫米饭 — €0.46</td><td class="diet">🟢🔴 纯素，无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+  </tbody></table>
+
+  <!-- Tuesday -->
+  <h2 class="day">星期二，11月25日</h2>
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>主菜</td><td class="dish">有机德墨风味鸡小腿 — €3.41</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+
+    <tr><td></td><td class="dish">鱼柳配姜黄奶油酱 — €3.35</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🐟 🥛</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>烧烤</td><td class="dish">牛肉汉堡排 — €3.21</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">烤火鸡嫩排 — €2.35</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>素食</td><td class="dish">普罗旺斯风味素丸子 — €2.34</td><td class="diet">🔵 素食</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🌾 （可能含有）</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>配菜</td><td class="dish">清炒绿甘蓝配胡萝卜 — €0.67</td><td class="diet">🟢🔴 纯素，无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">有机粗小麦（布格小麦） — €0.67</td><td class="diet">🟢 纯素</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🌾</td></tr>
+  </tbody></table>
+
+  <!-- Wednesday -->
+  <h2 class="day">星期三，11月26日</h2>
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>主菜</td><td class="dish">烤小牛肉配蘑菇森林酱 — €3.53</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🥛</td></tr>
+
+    <tr><td></td><td class="dish">鳕鱼柳配酸豆杏仁酱 — €3.97</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🐟 🌰 🥛</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>烧烤</td><td class="dish">牛肉汉堡排 — €3.21</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">烤火鸡嫩排 — €2.35</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>素食</td><td class="dish">菠菜艾门塔干酪卡佩莱蒂 — €2.34</td><td class="diet">🔵 素食</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🌾 🥚 🥛</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>配菜</td><td class="dish">什锦蔬菜 — €0.93</td><td class="diet">🟢🔴 纯素，无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">焗烤意式土豆丸子 — €0.93</td><td class="diet">🔵 素食</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🌾 🥛</td></tr>
+  </tbody></table>
+
+  <!-- Thursday -->
+  <h2 class="day">星期四，11月27日</h2>
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>主菜</td><td class="dish">有机牛肉斯特罗加诺夫 — €3.82</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🥛</td></tr>
+
+    <tr><td></td><td class="dish">波尔多风味焗烤鱼排 — €2.91</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🐟 🥛 🌾</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>烧烤</td><td class="dish">牛肉汉堡排 — €3.21</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">烤火鸡嫩排 — €2.35</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>素食</td><td class="dish">玉米素辣酱炖豆（Chili） — €2.34</td><td class="diet">🟢🔴 纯素，无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>配菜</td><td class="dish">有机欧防风与胡萝卜双拼 — €0.93</td><td class="diet">🟢🔴 纯素，无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">粗粒小麦粉（蒸粗麦粉） — €0.46</td><td class="diet">🟢 纯素</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🌾</td></tr>
+  </tbody></table>
+
+  <!-- Friday -->
+  <h2 class="day">星期五，11月28日</h2>
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>主菜</td><td class="dish">香脆鸡块 — €2.35</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🌾 🥚 🥛</td></tr>
+
+    <tr><td></td><td class="dish">海鲷鱼柳配奶油洋葱酱 — €3.97</td><td class="diet"></td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🐟 🥛</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>烧烤</td><td class="dish">牛肉汉堡排 — €3.21</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">烤火鸡嫩排 — €2.35</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>素食</td><td class="dish">沙克舒卡（番茄炖蛋） — €2.34</td><td class="diet">🔵 素食</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🥚</td></tr>
+  </tbody></table>
+
+  <table>
+  <thead><tr><th style="width:38%">类别</th><th style="width:42%">菜品</th><th style="width:20%">饮食</th></tr></thead>
+  <tbody>
+    <tr><td>配菜</td><td class="dish">西葫芦 — €0.93</td><td class="diet">🟢🔴 纯素，无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： —</td></tr>
+    <tr><td></td><td class="dish">土豆泥 — €0.67</td><td class="diet">🔴 无麸质</td></tr>
+    <tr class="allergen-row"><td></td><td colspan="2">过敏原： 🥛</td></tr>
+  </tbody></table>
+
+</div>
+</body>
+</html>
